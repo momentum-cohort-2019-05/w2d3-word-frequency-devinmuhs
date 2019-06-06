@@ -20,6 +20,17 @@ def print_word_freq(file):
         if x not in STOP_WORDS:
             remove_stop_words.append(x)
     print(remove_stop_words)
+
+
+    word_counter = {}
+
+    for word in remove_stop_words:
+        if word not in word_counter:
+            word_counter[word]= 1
+        else:
+            word_counter[word] += 1
+    print(word_counter)
+    
     """Read in `file` and print out the frequency of words in that file."""
     pass
 
