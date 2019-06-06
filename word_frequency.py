@@ -19,8 +19,6 @@ def print_word_freq(file):
     for x in splitter:
         if x not in STOP_WORDS:
             remove_stop_words.append(x)
-    print(remove_stop_words)
-
 
     word_counter = {}
 
