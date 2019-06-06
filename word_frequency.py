@@ -19,7 +19,7 @@ def print_word_freq(file):
     for x in splitter:
         if x not in STOP_WORDS:
             remove_stop_words.append(x)
-    remove_stop_words
+    print(remove_stop_words)
     """Read in `file` and print out the frequency of words in that file."""
     pass
 
