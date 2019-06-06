@@ -5,8 +5,6 @@ STOP_WORDS = [
 ]
 
 import re
-
-
 def print_word_freq(file):
     f = open(file)
     all_the_txt = (f.read())
@@ -27,11 +25,17 @@ def print_word_freq(file):
             word_counter[word]= 1
         else:
             word_counter[word] += 1
-    print(word_counter)
+
     
+    def get_second_item(seq):
+        return seq[1]
+    
+    remove_stop_words = sorted(word_counter.items(), key=get_second_item, reverse=True)
+
+
+    print(remove_stop_words)
     """Read in `file` and print out the frequency of words in that file."""
     pass
-
 
 if __name__ == "__main__":
     import argparse
